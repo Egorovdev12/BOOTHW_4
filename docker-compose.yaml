@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  app1:
+    build: ./
+    image: 'testap:1.0'
+    ports:
+      - '8080:8090'
+    container_name: 'application1'
+    environment:
+      myapp_data_text: 25
+  app2:
+    build: ./
+    image: 'testap:2.0'
+    ports:
+      - '8081:8090'
+    container_name: 'application2'
+    environment:
+      myapp_data_text: 50
+  app3:
+    build: ./
+    image: 'testap:3.0'
+    ports:
+      - '8082:8090'
+    container_name: 'application3'
+    environment:
+      myapp_data_text: 75
